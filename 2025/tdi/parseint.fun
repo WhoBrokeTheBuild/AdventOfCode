@@ -1,7 +1,8 @@
 
-public fun parseint(_string)
+/* TODO: numeric limits */
+public fun parseint(in _string)
 {
-    _result = 0;
+    _result = 0Q;
     for (_i = 0; _i < len(_string); ++_i) {
         _c = extract(_i, 1, _string);
 
