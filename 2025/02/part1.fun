@@ -6,9 +6,9 @@ public fun part1() {
 
     _sum = 0QU;
 
-    _parts = split(_data, ",");
-    for (_i = 0; _i < size(_parts); ++_i) {
-        _part = _parts[_i];
+    _i = 0;
+    _part = element(_i++, ',', _data);
+    while (len_trim(_part) > 0) {
         _split = scan(_part, '-');
 
         _min = parseint(extract(0, _split, _part));
@@ -27,6 +27,8 @@ public fun part1() {
                 _sum += _value;
             }
         }
+
+        _part = element(_i++, ',', _data);
     }
 
     return(_sum);
